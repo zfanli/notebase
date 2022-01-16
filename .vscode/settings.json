@@ -24,12 +24,19 @@
     "node": {
       "note": "#CFE4DD",
       "placeholder": "#5E556A",
-      "linux": "#FE87AC",
-      "tag": "#FECBCF"
+      "tag": "#FECBCF",
+      "Linux": "#9FE7F5",
+      "EnglishPhrase": "#FE87AC"
     }
   },
+  "foam.files.ignore": [
+    "**/.foam/**/*",
+    "**/.vscode/**/*",
+    "**/_layouts/**/*",
+    "**/_site/**/*",
+    "**/node_modules/**/*"
+  ],
   "git.enableSmartCommit": true,
-  "git.postCommitCommand": "sync",
   "markdown.preview.breaks": true,
   "pasteImage.path": "${projectRoot}/attachments",
   "pasteImage.showFilePathConfirmInputBox": true,

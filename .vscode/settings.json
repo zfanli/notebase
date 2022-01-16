@@ -16,6 +16,18 @@
   "foam.edit.linkReferenceDefinitions": "off",
   "foam.openDailyNote.directory": "journal",
   "foam.openDailyNote.titleFormat": "yyyy-mm-dd ddd",
+  "foam.openDailyNote.filenameFormat": "yyyy-mm-dd ddd",
+  "foam.graph.style": {
+    "background": "#202020",
+    "fontSize": 12,
+    "highlightedForeground": "#FE87AC",
+    "node": {
+      "note": "#CFE4DD",
+      "placeholder": "#5E556A",
+      "linux": "#FE87AC",
+      "tag": "#FECBCF"
+    }
+  },
   "git.enableSmartCommit": true,
   "git.postCommitCommand": "sync",
   "markdown.preview.breaks": true,
@@ -26,6 +38,5 @@
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
   "spellright.language": ["en"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-  "foam.openDailyNote.filenameFormat": "yyyy-mm-dd ddd"
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"]
 }

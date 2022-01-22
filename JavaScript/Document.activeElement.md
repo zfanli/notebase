@@ -5,11 +5,31 @@ tags: JavaScript
 
 # Document.activeElement
 
-[[Document]] 接口的只读属性 `activeElement` 会返回当前文档中焦点激活（focus 状态）的元素。
+[[Document]] 接口的只读属性 `activeElement` 会返回当前文档中焦点激活（focus 状态）的 [[Element]] 对象。
 
-这个属性在输入框被选中的时候通常会指向一个 [[HTMLInputElement]] 或是一个 [[HTMLTextAreaElement]] 对象，可以通过对象的 `selectionStart` 和 `selectionEnd` 属性来获得当前光标选中范围的起始和结束点。
+## 不同场景下的返回值
 
-除了输入框，其他时候这个属性返回的对象还可能是 `<select>` 元素，或者其他类型的 `<input>` 元素，比如按钮、checkbox 和 radio。
+- 存在聚焦状态的元素时：
+  - [[HTMLInputElement]]
+  - [[HTMLTextAreaElement]]
+  - `<select>`
+  - 其他类型的 `<input>` 元素，比如按钮、checkbox 和 radio
+- 不存在聚焦状态的元素时：
+  - `<body>`
+  - 或者 `null`
+
+当聚焦对象为一个 [[HTMLInputElement]] 或是一个 [[HTMLTextAreaElement]] 对象时的额外属性：
+
+- `selectionStart` 光标选中范围的开始索引
+- `selectionEnd` 光标选中范围的结束索引
+
+> 聚焦（focus）与选中（selection）不同，如果需要获取当前文档被选中的高亮部分，需要使用浏览器的 [[window.getSelection|window.getSelection()]] 方法。
+
+## 浏览器兼容性
+
+所有浏览器均支持该属性。
+
+## 用户操作
 
 用户可以使用 `tab` 键让焦点在不同元素之间切换，使用空格键来激活焦点选中的元素。元素是否可以被焦点选中取决于平台和当前的浏览器配置。
 
@@ -43,3 +63,4 @@ tags: JavaScript
 
 - check if focused
 - 检查是否激活
+- 检查是否聚焦

@@ -9,3 +9,4 @@
 - [ ] [Foam] 在笔记中创建不存在的笔记时提示从模版创建
 - [ ] [Foam] wikilink 别名语法在 markdown 的表格语法中的兼容问题
 - [ ] [Foam] wikilink 别名语法使用 back tick 进行行内代码高亮时预览不会显示为一个链接
+- [ ] [Foam] 文件重命名时 wikilink 引用的自动更新

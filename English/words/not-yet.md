@@ -1,6 +1,6 @@
 ---
-type: EnglishPhrase
-tags: English phrase
+type: EnglishWords
+tags: English Word
 created: 2022-01-16
 ---
 

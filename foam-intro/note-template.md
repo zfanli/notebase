@@ -1,18 +1,25 @@
 ---
+type: Foam
+tags: Foam
 created: 2022-01-16
 ---
 
 # Note Template
 
-Foam 支持笔记模版。通过笔记模版可以方便的创建不同类型的笔记。
-
-- 笔记模版可以自定义如何创建笔记，而不用从零开始新建文件
-- 模版文件通常是 `.md` 格式文件，储存在 `.foam/templates` 目录
+笔记模版储存在 `.foam/templates` 目录，使用模版可以快速创建指定类型的笔记。
 
 ## 笔记模版相关的命令
 
-- `Foam: Create New Note From Template` 从相应模版创建新的笔记
+### 创建笔记模版
+
+- 可以手动在 `.foam/templates` 目录创建 `.md` 文件创建模版
+- 通过 `Foam: Create New Template` 创建新模版
+
+### 通过模版创建笔记
+
 - `Foam: Create New Note` 从默认模版创建新的笔记
+  - 默认模版 `.foam/templates/new-note.md`
+- `Foam: Create New Note From Template` 从相应模版创建新的笔记
 - `Foam: Open Daily Note` 从日记类型模版创建新的笔记
 
 ## 特殊的笔记模版
@@ -24,7 +31,7 @@ Foam 笔记模版保留了几个文件名称，在 Foam 提供的默认命令中
 
 ## 变量
 
-Foam 笔记模版实际上是一个代码片段，可以使用 [VSCode snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables) 中定义的代码片段可以使用的变量来方便创建我们的笔记。
+Foam 笔记模版可以使用 [VSCode snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables) 中提供的变量。
 
 除此之外 Foam 提供以下的变量：
 
@@ -42,7 +49,7 @@ Foam 笔记模版实际上是一个代码片段，可以使用 [VSCode snippets]
 
 ```md
 ---
-existing_frontmatter: "Existing Frontmatter block"
+existing_front_matter: "Existing Front Matter block"
 foam_template: # this is a YAML "Block" mapping ("Flow" mappings aren't supported)
   name: My Note Template # Attributes must be on the lines immediately following `foam_template`
   description: This is my note template

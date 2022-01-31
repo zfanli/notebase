@@ -2,6 +2,10 @@
 
 - [ ] 迁移和重构原笔记到这个仓库
 - [ ] 补充 foam-intro 内容
+- [ ] https://kubesphere.io/zh/
+- [ ] vue 3.x
+- [ ] ECMAScript
+- [ ] https://foambubble.github.io/foam/recipes/capture-notes-with-drafts-pro
 
 ## 插件改善？
 

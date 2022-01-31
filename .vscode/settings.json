@@ -45,5 +45,12 @@
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
   "spellright.language": ["en"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext"]
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  "cSpell.words": [
+    "Backlinking",
+    "Backlinks",
+    "balabla",
+    "wikilink",
+    "wikilinks"
+  ]
 }

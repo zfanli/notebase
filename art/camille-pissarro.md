@@ -16,4 +16,4 @@ created: 2022-01-22
 | 风格         | [[impressionism]]                        |
 | 成就         | 印象派大师                               |
 
-与 [[Claude Monet|莫奈]] 互为好友。
+与 [[claude-monet|莫奈]] 互为好友。

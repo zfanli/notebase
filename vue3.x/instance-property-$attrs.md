@@ -19,16 +19,16 @@ Vue 2.x 的虚拟 DOM 实现对 `class` 和 `style` 存在特殊处理，所以�
 
 定义：
 
-```vue
+```html
 <template>
   <label>
     <input type="text" v-bind="$attrs" />
   </label>
 </template>
 <script>
-export default {
-  inheritAttrs: false,
-}
+  export default {
+    inheritAttrs: false,
+  }
 </script>
 ```
 

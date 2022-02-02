@@ -16,9 +16,9 @@ created: 2022-02-02
 
 抽离出来的逻辑还可以抽象成方法，只需要返回所需的响应式属性和指定方法，让一段逻辑变成可插拔式。提升了灵活性和可复用性。
 
-## `setup` 组件选项
+## `setup` 选项
 
-按照设计，[[[[option-setup]]|setup]] 中的代码在 `props` 解析之后，`data` 、 `computed` 和 `method` 等选项解析之前执行，所以无法使用 `this` 上下文。`setup` 中无法获取到组件实例。
+按照设计，[[option-setup|setup]] 中的代码在 `props` 解析之后，`data` 、 `computed` 和 `method` 等选项解析之前执行，所以无法使用 `this` 上下文。`setup` 中无法获取到组件实例。
 
 `setup` 选项返回一个对象，可以包含响应式属性和方法，这些方法在其他实例选项中可以被访问。
 
@@ -101,6 +101,172 @@ export default {
     },
   },
 }
+```
+
+### Provide / Inject
+
+组合式 API 可以通过全局 API 实现 `provide` 和 `inject` 能力。
+
+- [[global-api-provide|全局 API provide]]
+- [[global-api-inject|全局 API inject]]
+
+```js
+import { provide } from "vue"
+import MyMarker from "./MyMarker.vue"
+
+export default {
+  components: {
+    MyMarker,
+  },
+  setup() {
+    provide("location", "North Pole")
+    provide("geoLocation", {
+      longitude: 90,
+      latitude: 135,
+    })
+  },
+}
+```
+
+```js
+import { inject } from "vue"
+
+export default {
+  setup() {
+    const userLocation = inject("location", "The Universe")
+    const userGeoLocation = inject("geoLocation")
+
+    return {
+      userLocation,
+      userGeoLocation,
+    }
+  },
+}
+```
+
+### 模版引用
+
+[[global-api-ref|全局 API ref]] 可以用来引用模版。在虚拟 DOM 的算法中，如果 VNode 的 ref 属性对应上下文中的某个 ref，则 VNode 相应元素或组件的实例将被分配作为该 ref 的值。这个过程是在虚拟 DOM 挂载、打补丁的过程中执行的，因此模版引用仅在初始渲染之后获得赋值。
+
+```html
+<template>
+  <div ref="root">This is a root element</div>
+</template>
+
+<script>
+  import { ref, onMounted } from "vue"
+
+  export default {
+    setup() {
+      const root = ref(null)
+
+      onMounted(() => {
+        // DOM 元素将在初始渲染后分配给 ref
+        console.log(root.value) // <div>This is a root element</div>
+      })
+
+      return {
+        root,
+      }
+    },
+  }
+</script>
+```
+
+**但是配合 `v-for` 使用 `ref` 时没有特殊处理，这时需要用函数自定义保存 `ref` 对象。**
+
+```html
+<template>
+  <div
+    v-for="(item, i) in list"
+    :ref="
+      (el) => {
+        if (el) divs[i] = el
+      }
+    "
+  >
+    {{ item }}
+  </div>
+</template>
+
+<script>
+  import { ref, reactive, onBeforeUpdate } from "vue"
+
+  export default {
+    setup() {
+      const list = reactive([1, 2, 3])
+      const divs = ref([])
+
+      // 确保在每次更新之前重置ref
+      onBeforeUpdate(() => {
+        divs.value = []
+      })
+
+      return {
+        list,
+        divs,
+      }
+    },
+  }
+</script>
+```
+
+### 侦听模版引用
+
+由于模版引用在 DOM 渲染后才会赋值，而 [[global-api-watch|watch]] 和 [[global-api-watchEffect|watchEffect]] 会在模版渲染前执行，所以对模版引用使用这些函数侦听时，模版引用还未被赋值。
+
+```html
+<template>
+  <div ref="root">This is a root element</div>
+</template>
+
+<script>
+  import { ref, watchEffect } from "vue"
+
+  export default {
+    setup() {
+      const root = ref(null)
+
+      watchEffect(() => {
+        // 这个副作用在 DOM 更新之前运行，因此，模板引用还没有持有对元素的引用。
+        console.log(root.value) // => null
+      })
+
+      return {
+        root,
+      }
+    },
+  }
+</script>
+```
+
+这时 `flush: 'post'` 选项可以修改侦听器的执行时机，`post` 让其在 DOM 渲染之后再执行。这时模版引用已经被正确赋值。
+
+```html
+<template>
+  <div ref="root">This is a root element</div>
+</template>
+
+<script>
+  import { ref, watchEffect } from "vue"
+
+  export default {
+    setup() {
+      const root = ref(null)
+
+      watchEffect(
+        () => {
+          console.log(root.value) // => <div>This is a root element</div>
+        },
+        { flush: "post" }
+      )
+
+      return {
+        root,
+      }
+    },
+  }
+</script>
 ```
 
 ## 参考

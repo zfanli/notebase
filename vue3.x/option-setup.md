@@ -87,30 +87,30 @@ export default {
 
 > 注意通过全局 API 创建的 [[concept-refs|refs]] 会被自动浅解包（即仅解包一层，如果有嵌套 refs，则还是需要通过 `.value` 访问嵌套属性的值。
 
-```vue
+```html
 <!-- MyBook.vue -->
 <template>
   <div>{{ collectionName }}: {{ readersNumber }} {{ book.title }}</div>
 </template>
 
 <script>
-import { ref, reactive } from "vue"
+  import { ref, reactive } from "vue"
 
-export default {
-  props: {
-    collectionName: String,
-  },
-  setup(props) {
-    const readersNumber = ref(0)
-    const book = reactive({ title: "Vue 3 Guide" })
+  export default {
+    props: {
+      collectionName: String,
+    },
+    setup(props) {
+      const readersNumber = ref(0)
+      const book = reactive({ title: "Vue 3 Guide" })
 
-    // 暴露给 template
-    return {
-      readersNumber,
-      book,
-    }
-  },
-}
+      // 暴露给 template
+      return {
+        readersNumber,
+        book,
+      }
+    },
+  }
 </script>
 ```
 

@@ -50,6 +50,7 @@
     "Backlinking",
     "Backlinks",
     "balabla",
+    "divs",
     "keypress",
     "keyup",
     "Kube",
@@ -57,5 +58,8 @@
     "vnode",
     "wikilink",
     "wikilinks"
-  ]
+  ],
+  "markdown-preview-enhanced.codeBlockTheme": "vue.css",
+  "markdown-preview-enhanced.frontMatterRenderingOption": "code block",
+  "markdown-preview-enhanced.previewTheme": "vue.css"
 }

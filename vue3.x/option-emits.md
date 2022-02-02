@@ -21,14 +21,14 @@ created: 2022-02-01
 
 比如以下组件中，触发了 `click` 事件但是未在 `emits` 进行声明。
 
-```vue
+```html
 <template>
   <button v-on:click="$emit('click', $event)">OK</button>
 </template>
 <script>
-export default {
-  emits: [], // 不声明事件
-}
+  export default {
+    emits: [], // 不声明事件
+  }
 </script>
 ```
 

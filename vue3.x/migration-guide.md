@@ -9,7 +9,7 @@ tags: Vue3.x
 
 ### 全局 API
 
-- [[app-api-createApp|createApp]]
+- [[global-api-createApp|createApp]]
 - [[concept-tree-shaking|全局 API 支持 Tree-Shaking]]
 
 ### 模版指令
@@ -24,7 +24,7 @@ tags: Vue3.x
 ### 组件
 
 - [[functional-component|使用普通函数创建函数式组件]]
-- [[app-api-defineAsyncComponent|异步组件使用 defineAsyncComponent 创建]]
+- [[global-api-defineAsyncComponent|异步组件使用 defineAsyncComponent 创建]]
 - [[option-emits|组件事件需要在 emits 选项声明]]
 
 ### 渲染函数

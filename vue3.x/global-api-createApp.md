@@ -4,7 +4,7 @@ tags: Vue3.x
 created: 2022-02-01
 ---
 
-# App API: createApp
+# Global API: createApp
 
 非兼容。
 
@@ -24,7 +24,7 @@ const { createApp } = Vue
 const app = createApp({})
 ```
 
-## App 实例 API
+## Vue 2.x 全局 API 到 Vue 3.x 应用实例 API 的变化
 
 App 实例暴露了 Vue 2.x API 的子集。下面是 Vue 2.x 全局 API 对应到 Vue 3.x App 实例 API 的列表。
 
@@ -99,6 +99,48 @@ const app = createApp(MyApp)
 app.use(VueRouter)
 ```
 
+## App 实例 API
+
+### component
+
+函数，注册组件，或者检索组件。注册会使用 `name` 参数设定组件的 `name` property。
+
+参数：
+
+1. `name` 字符串，名称
+2. `definition` 函数或对象，组件定义
+
+返回值：
+
+- 如果 `definition` 存在，返回 App 实例
+- 如果 `definition` 不存在，返回组件实例
+
+```js
+import { createApp } from "vue"
+
+const app = createApp({})
+
+// 注册组件
+app.component("my-component", {
+  /* ... */
+})
+
+// 检索注册的组件
+const MyComponent = app.component("my-component")
+```
+
+### config
+
+对象，包含 App 的配置信息。
+
+```js
+import { createApp } from 'vue'
+const app = createApp({})
+
+app.config = {...}
+```
+
 ## 参考
 
 - [全局 API | Vue.js](https://v3.cn.vuejs.org/guide/migration/global-api.html#%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E5%85%A8%E5%B1%80-api-createapp)
+- [应用 API | Vue.js](https://v3.cn.vuejs.org/api/application-api.html)

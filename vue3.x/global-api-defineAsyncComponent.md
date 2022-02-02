@@ -4,7 +4,7 @@ tags: Vue3.x
 created: 2022-02-01
 ---
 
-# App API: defineAsyncComponent
+# Global API: defineAsyncComponent
 
 新增。
 

@@ -1,5 +1,6 @@
 ---
 created: 2022-01-22
+type: JavaScript
 tags: JavaScript
 ---
 

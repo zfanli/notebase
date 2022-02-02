@@ -1,5 +1,6 @@
 ---
 created: 2022-01-16
+type: JavaScript
 tags: JavaScript
 ---
 
@@ -50,7 +51,7 @@ tags: JavaScript
 
 <script>
   function saveUser() {
-    const currentUserId = "01";
+    const currentUserId = "01"
     // 当前焦点元素的用户 id 与当前编辑的用户 id 不一致则表示当前用户输入字段失去焦点
     if (document.activeElement.dataSet["userId"] !== currentUserId) {
       // ...执行具体的保存逻辑

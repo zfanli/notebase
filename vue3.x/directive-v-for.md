@@ -6,7 +6,7 @@ created: 2022-02-01
 
 # Directive: v-for
 
-## `ref` 不再注册数组
+## ref 不再注册数组
 
 非兼容。
 

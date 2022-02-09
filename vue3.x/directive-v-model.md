@@ -8,6 +8,62 @@ created: 2022-02-01
 
 非兼容。
 
+## 用法
+
+### 表单元素双向绑定
+
+`v-model` 指令在表单元素 `<input>`、`<textarea>` 和 `<select>` 上使用时会根据元素类型自动选取正确的方法来更新元素。
+
+- text 和 textarea 元素使用 `value` property 和 `input` 事件
+- checkbox 和 radio 使用 `checked` property 和 `change` 事件
+- select 元素使用 `value` 作为 property 和 `change` 事件
+
+> 需要输入法输入的语言，在文字组织的过程中不会进行数据的更新。如果你需要响应这些更新，需要使用 `input` 事件监听器和 `value` 绑定取代 `v-model`。
+
+在 checkbox 上使用 `v-model` 时，根据选中状态会默认使用布尔值作为其绑定的具体值，可以通过下面的方式修改。
+
+```html
+<input type="checkbox" v-model="toggle" true-value="yes" false-value="no" />
+```
+
+```js
+// 当选中时：
+vm.toggle === 'yes'
+// 当未选中时：
+vm.toggle === 'no'
+```
+
+### 修饰符
+
+#### .lazy
+
+`.lazy` 会让 `v-model` 从默认监听 `input` 事件改为监听 `change` 事件。
+
+```html
+<!-- 在“change”时而非“input”时更新 -->
+<input v-model.lazy="msg" />
+```
+
+#### .number
+
+`.number` 在 `type="text"` 时可以自动将值转换为数值。如果这个值无法被 `parseFloat()` 解析，将返回原始的值。
+
+```html
+<input v-model.number="age" type="text" />
+```
+
+在 `type="number"` 时 Vue 会自动将值转换为数值，不需要指定 `.number` 修饰符。
+
+#### .trim
+
+`.trim` 可以自动过滤用户输入值的首位空白字符。
+
+```html
+<input v-model.trim="msg" />
+```
+
+## Vue 2.x 对比 Vue 3.x
+
 Vue 2.x 用法。
 
 ```html
@@ -93,8 +149,8 @@ Vue 2.x `model` 选项可以修改 `v-model` 默认绑定的 prop 名称和事�
 
 export default {
   model: {
-    prop: "title",
-    event: "change",
+    prop: 'title',
+    event: 'change',
   },
   props: {
     // 这将允许 `value` 属性用于其他用途
@@ -102,7 +158,7 @@ export default {
     // 使用 `title` 代替 `value` 作为 model 的 prop
     title: {
       type: String,
-      default: "Default title",
+      default: 'Default title',
     },
   },
 }
@@ -132,10 +188,10 @@ export default {
   props: {
     modelValue: String, // 以前是`value：String`
   },
-  emits: ["update:modelValue"],
+  emits: ['update:modelValue'],
   methods: {
     changePageTitle(title) {
-      this.$emit("update:modelValue", title) // 以前是 `this.$emit('input', title)`
+      this.$emit('update:modelValue', title) // 以前是 `this.$emit('input', title)`
     },
   },
 }

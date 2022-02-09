@@ -13,6 +13,40 @@ created: 2022-02-01
 - 数组：定义事件名称
 - 对象：定义事件名称、定义事件参数校验器
 
+定义事件名称的例子。如果定义了原生事件，如 `click` 事件，将使用组件中的事件代替原生事件监听器。
+
+```js
+app.component("custom-form", {
+  emits: ["inFocus", "submit"],
+})
+```
+
+定义对象进行事件参数校验的例子。返回布尔值指示事件是否有效。
+
+```js
+app.component("custom-form", {
+  emits: {
+    // 没有验证
+    click: null,
+
+    // 验证 submit 事件
+    submit: ({ email, password }) => {
+      if (email && password) {
+        return true
+      } else {
+        console.warn("Invalid submit event payload!")
+        return false
+      }
+    },
+  },
+  methods: {
+    submitForm(email, password) {
+      this.$emit("submit", { email, password })
+    },
+  },
+})
+```
+
 ## 迁移策略
 
 官方强烈建议给所有组件定义 `emits` 属性声明其可能触发的事件。任何未声明在 `emits` 中的事件的监听器会被挂在在组件的 `$attr` 属性上，并默认绑定到组件的根节点上。

@@ -83,3 +83,11 @@ tags: Vue3.x
 ## 值得注意的新特性
 
 - [[concept-composition-api|组合式 API]]
+- [[component-teleport|内置组件 Teleport]]
+- [[concept-fragments|片段：多根节点]]
+- [[option-emits|组件选项：emits]]
+- 自定义渲染器
+  - [core/packages/runtime-core/src at main · vuejs/core · GitHub](https://github.com/vuejs/core/tree/main/packages/runtime-core/src)
+- [[sfc-script-setup|单文件组件组合式 API 语法糖：script setup]]
+- [[sfc-style#v-bind in Style|状态驱动的动态 CSS（v-bind in Style）]]
+- [[component-suspense|Suspense （实验性）]]

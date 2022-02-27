@@ -1,14 +1,16 @@
 ---
 type: HTML
-tags: HTML
+# tags: HTML
 created: 2022-02-02
 ---
 
 # Concept: IDL Attributes
 
-HTML 中大部分属性（Attribute）都存在 2 种形式，分别是 [[concept-content-attributes|Content Attributes]] 和 IDL（Interface Definition Language） Attributes。
+HTML 中大部分属性（Attribute）都存在 2 种形式，分别是 [[html-concept-content-attributes|Content Attributes]] 和 IDL（Interface Definition Language） Attributes。
 
-**IDL Attributes** 就是 JavaScript 属性，与 Content Attributes 通过 `element.setAttribute()` 接口赋值不同，IDL Attributes 可以通过 `element.foo` 的方式直接赋值。
+**IDL Attributes** 就是 JavaScript 属性，表达的是在 HTML 规格中这个属性所能接受的值。与 Content Attributes 的不同之处在于 IDL Attributes 的直接变更不会体现在 HTML 上， 即修改 IDL Attributes 之后查看 HTML 标签并不会看到属性修改的结果。IDL 意为接口定义语言，仅接受接口定义的有效值，如果出现无效赋值的情况，将使用默认值来替代无效赋值。
+
+在赋值方式上，与 Content Attributes 通过 `element.setAttribute()` 接口赋值不同，IDL Attributes 可以通过 `element.foo` 的方式直接赋值。
 
 **IDL Attributes** 会基本反映 Content Attributes，但是会做相应的转换。比如 [[element-input|\<input\>]] 元素属性 `maxlength` 要设置数值 `42`，`element.maxlength = 42`，如果没有设置数值，会尝试转换为数值，如果转换失败，会被赋值为 `0`。
 

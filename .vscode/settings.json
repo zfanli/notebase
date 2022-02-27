@@ -58,7 +58,8 @@
     "vnode",
     "vuejs",
     "wikilink",
-    "wikilinks"
+    "wikilinks",
+    "Zettelkasten"
   ],
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
   "markdown-preview-enhanced.frontMatterRenderingOption": "code block",

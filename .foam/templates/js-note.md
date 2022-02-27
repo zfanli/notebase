@@ -1,9 +1,9 @@
 ---
 type: JavaScript
-tags: JavaScript
+# tags: JavaScript
 created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
 foam_template:
-  filepath: JavaScript/$FOAM_TITLE.md
+  filepath: cs/$FOAM_TITLE.md
   name: JavaScript 笔记模版
 ---
 

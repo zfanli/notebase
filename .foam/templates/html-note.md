@@ -1,9 +1,9 @@
 ---
 type: HTML
-tags: HTML
+# tags: HTML
 created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
 foam_template:
-  filepath: HTML/$FOAM_TITLE.md
+  filepath: cs/$FOAM_TITLE.md
   name: HTML 笔记模版
 ---
 

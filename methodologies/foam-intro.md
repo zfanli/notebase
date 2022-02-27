@@ -10,7 +10,7 @@ created: 2022-01-31
 
 > foam，意为泡沫。
 
-**Foam** 是一个 VSCode 插件，受到 [[Roam Research]] 的启发，主打个人知识库管理和知识分享功能。
+**Foam** 是一个 VSCode 插件，受到 [[roam-research]] 的启发，主打个人知识库管理和知识分享功能。这是一个实现了 [[zettelkasten-method]] 的工具。
 
 Foam 可以提供了一些功能支持你：
 

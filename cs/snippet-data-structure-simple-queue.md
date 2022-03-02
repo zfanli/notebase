@@ -1,11 +1,11 @@
 ---
 type: Snippet
-tags: DataStructure Queue
+tags: DataStructure Queue FIFO
 ---
 
 # Snippet: Simple Queue
 
-简单的队列实现。实现队列的入列、出列方法，同时实现队列查看首个元素、检查队列是否为空的方法。
+简单的队列实现。实现队列的入列、出列方法，同时实现队列查看首个元素、检查队列是否为空的方法。参考 [[data-structure-queue]]。
 
 ## Java
 

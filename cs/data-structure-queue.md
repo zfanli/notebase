@@ -1,6 +1,6 @@
 ---
 type: DataStructure
-tags: Queue BFS
+tags: Queue BFS FIFO
 ---
 
 # Queue: First-in-first-out

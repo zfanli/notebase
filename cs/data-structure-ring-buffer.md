@@ -9,6 +9,8 @@ tags: Queue FIFO
 
 也叫做循环队列（Circular Queue）、循环缓冲区（Cyclic Buffer、Circular Buffer）。
 
+参考代码实现 [[snippet-data-structure-circular-queue|循环队列]]。
+
 ## 概念
 
 环形缓冲区是一种经过设计的数据结构，在有限的空间中实现一个队列数据结构，元素从左到右依次入列，一直到队列被填满，新的元素无法入列。

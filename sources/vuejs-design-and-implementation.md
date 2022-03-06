@@ -52,3 +52,64 @@ Vue.js 为最优化声明式代码的执行效率，需要最小化解析并找�
   - 执行副作用时要避免操作同一个对象导致无限循环
     - 通过对遍历对象做一次备份避免无限循环
     - Set.prototype.forEach 规范
+
+响应式实现 - 副作用嵌套
+
+- 使用 Stack 处理副作用函数嵌套时收集依赖的问题
+
+响应式实现 - 避免自我依赖导致无限循环
+
+- 在 `set` 函数进行过滤，防止重复执行自身
+
+响应式实现 - 实现调度系统
+
+- 副作用函数传递一个参数让用户可以手动调度副作用的执行时机
+- 将副作用的执行放到微任务队列，使用 Set 进行去重，筛除重复的副作用执行
+
+响应式实现 - 实现 computed
+
+- lazy 模式的 effect 函数
+- 通过调度器来实现缓存结果
+
+响应式实现 - 实现 watch
+
+- effect 函数的调度器中执行回调函数
+- 同时缓存 oldVal 传递给回调作为参数
+
+响应式实现 - 非原始值数据的响应式
+
+- Proxy 配合 Reflect 实现对象的所有操作的监听
+- 在 proxy 中缓存旧的值，需要仅在值发生改变时才执行 effect 函数
+  - oldVal !== newVal && (oldVal === oldVal || newVal === newVal)
+- 如果原型链也是响应式数据，并且访问的方法存在于原型链上而非当前对象，此时会触发两次 effect 函数的执行，通过判断 target 是否为当前原型对象来阻止多余的 effect 函数执行
+
+## functions & vars
+
+### 响应式的实现
+
+Vue.js 3 的响应式系统基于 [[javascript-Proxy|Proxy]] 和 [[javascript-Reflect|Reflect]] 实现。
+
+functions
+
+- proxy 对象代理，ES6 新加入的特性，响应式系统中，每次在 `get` 中收集副作用函数并保存起来，在 `set` 中取出这些副作用函数依次执行，实现响应式效果
+- effect 副作用函数，相当于一个依赖关系，在某个数据得到更新时（`set` 调用时）需要执行的函数，通知依赖这个数据的其他数据更新
+  - scheduler 函数，作为 effect 函数的选项，提供让用户自行调度 effect 函数执行时机的方式，这个函数接受 effect 函数作为参数，让用户决定是否执行，和何时执行
+  - lazy 选项，指定懒加载行为，通常 effect 函数会立即执行，通过指定 lazy 选项让 effect 函数返回副作用函数本身，让用户决定何时去执行这个副作用函数
+- track 函数，在 proxy 的 `get` 方法中执行，封装了收集 effect 函数的过程
+- trigger 函数，在 proxy 的 `set` 方法中执行，封装了执行 effect 函数的过程。当一个 `set` 中对自身属性的值做了引用时，可能会导致 `set` 调用过程执行了 `get` 中的 track 函数，导致无限循环调用的问题，此时在 trigger 函数中需要跳过 activeEffect 为当前 effect 自身的情况
+- cleanup 函数，用来在每次执行 effect 函数时进行依赖清理操作，这样可以保证在条件控制分支发生切换的时候不会遗留不必要的 effect 函数，但是清理操作是针对 bucket 执行的，这可能会导致 trigger 函数在执行依赖时出现无限循环的问题，这时需要在 trigger 函数首先缓存当前的依赖
+- flushJob 函数，用来执行 jobQueue 中缓存的所有 effect 函数，通过一个 isFlushing 控制是否具体执行操作，如果执行操作，使用 Promise 将依次执行 effect 函数的过程放入微任务队列，使其在当前宏任务执行结束后才被执行
+- computed 函数，用来创建一个计算属性，其内部实际上使用了懒加载的 effect 函数来实现，并且借助其调度器选项实现了局部缓存上回计算结果的能力。由于计算属性也会被其他响应式数据作为依赖项，所以在 computed 的读取过程中也需要调用 track 和 trigger 函数进行依赖的收集和响应式的通知
+- watch 函数，用来在目标属性发生变化时执行回调函数，内部也使用 effect 函数来收集依赖，在 effect 的调度器函数选项中来通知 watch 的回调函数执行的时机，effect 函数的返回值可以作为 watch 回调函数的新旧值参数传递
+  - immediate 选择指定 watch 函数是否为立即执行，立即执行的行为和回调执行没有差别，这个选项为 true 时会在 watch 函数创建时执行一次回调
+
+vars
+
+- bucket 桶，用来储存精确到字段的 effect 函数（依赖关系）
+- activeEffect 当前处理的 effect 函数，一个全局变量用来缓存当前处理的 effect 函数
+- effectStack 副作用调用栈，用来处理 effect 函数嵌套时收集依赖关系的问题
+- jobQueue 任务队列，使用 Set 数据结构来做 effect 函数的去重处理，在调度函数中将所有 effect 函数放入 jobQueue，并调用 flushJob 函数将执行 effect 函数的过程放入微任务队列
+
+## TODO
+
+- 基于 Proxy 实现简易响应式系统

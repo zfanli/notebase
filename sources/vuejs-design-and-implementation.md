@@ -87,7 +87,7 @@ Vue.js 为最优化声明式代码的执行效率，需要最小化解析并找�
 
 ### 响应式的实现
 
-Vue.js 3 的响应式系统基于 [[javascript-Proxy|Proxy]] 和 [[javascript-Reflect|Reflect]] 实现。
+Vue.js 3 的响应式系统基于 [[javascript-Proxy|Proxy]] 和 [[javascript-Reflect|Reflect]] 实现。针对 [[javascript-Object]]、[[javascript-Array]]、[[javascript-Map]]、[[javascript-Set]]、[[javascript-WeakMap]]、[[javascript-WeakSet]] 等数据类型的所有操作进行收集依赖和拦截，来实现对所有非原始值的响应式。
 
 functions
 
@@ -109,6 +109,12 @@ vars
 - activeEffect 当前处理的 effect 函数，一个全局变量用来缓存当前处理的 effect 函数
 - effectStack 副作用调用栈，用来处理 effect 函数嵌套时收集依赖关系的问题
 - jobQueue 任务队列，使用 Set 数据结构来做 effect 函数的去重处理，在调度函数中将所有 effect 函数放入 jobQueue，并调用 flushJob 函数将执行 effect 函数的过程放入微任务队列
+
+### 原始值的响应式实现
+
+- 使用对象包裹原始值，使对其的修改能被 Proxy 侦测和拦截
+- ref、toRef、toRefs 辅助函数来处理包裹对象
+- 自动脱 ref 的能力减轻用户心智负担
 
 ## TODO
 

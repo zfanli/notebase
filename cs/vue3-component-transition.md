@@ -1,5 +1,5 @@
 ---
-type: Vue3
+type: Vue
 ---
 
 # Component: transition

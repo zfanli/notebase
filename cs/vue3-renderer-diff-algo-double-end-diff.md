@@ -1,5 +1,5 @@
 ---
-type: vue3
+type: Vue
 ---
 
 # Renderer: Double-end Diff

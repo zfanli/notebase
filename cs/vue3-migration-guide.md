@@ -1,5 +1,5 @@
 ---
-type: Vue3
+type: Vue
 ---
 
 # Vue 3.x 迁移指南

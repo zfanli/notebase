@@ -1,6 +1,6 @@
 ---
-type: Vue3
-# tags: Vue3
+type: Vue
+tags: Vue JavaScript
 ---
 
 # Concept: Virtual DOM

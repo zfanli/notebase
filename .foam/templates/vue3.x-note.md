@@ -1,6 +1,6 @@
 ---
-type: Vue3
-# tags: Vue3.x
+type: Vue
+tags: Vue JavaScript
 created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
 foam_template:
   filepath: cs/$FOAM_TITLE.md

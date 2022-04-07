@@ -52,6 +52,7 @@
     "balabla",
     "divs",
     "Fira",
+    "jabr",
     "Jeanatte",
     "keyof",
     "keypress",
@@ -60,6 +61,7 @@
     "Kubernetes",
     "liskov",
     "maxlen",
+    "PEMDAS",
     "piña",
     "Pinia",
     "typeof",
@@ -72,5 +74,6 @@
   ],
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
   "markdown-preview-enhanced.frontMatterRenderingOption": "code block",
-  "markdown-preview-enhanced.previewTheme": "vue.css"
+  "markdown-preview-enhanced.previewTheme": "vue.css",
+  "editor.formatOnSave": true
 }

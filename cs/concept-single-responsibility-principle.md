@@ -3,7 +3,7 @@ type: Concept
 tags: OOP
 ---
 
-# Concept: Single Responsibility Principle
+# Concept: 单一职责原则 Single Responsibility Principle
 
 > 问：你的类/组件/微服务的职责是什么？如果回答中出现“和”，那么再好好想想单一职责原则，或许有更好的方法来实现它。
 

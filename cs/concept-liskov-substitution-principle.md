@@ -3,7 +3,7 @@ type: Concept
 tags: OOP
 ---
 
-# Concept: Liskov Substitution Principle
+# Concept: 里氏替换原则 Liskov Substitution Principle
 
 > 子类需要在和父类行为一致的基础上进行拓展。
 

@@ -3,7 +3,7 @@ type: Concept
 tags: OOP
 ---
 
-# Concept: Interface Segregation Principle
+# Concept: 接口隔离原则 Interface Segregation Principle
 
 接口隔离原则，The Interface Segregation Principle，ISP，指将接口划分为更小单位且更加特定的接口，用户可以只需要关注其需要的部分接口。[[concept-solid-principles|SOLID 原则]] 中的字母 I 代表接口隔离原则。
 

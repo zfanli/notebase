@@ -3,7 +3,7 @@ type: Concept
 tags: Concept
 ---
 
-# Concept: Declarative 声明式
+# Concept: 声明式 Declarative
 
 声明式，在概念上只关注结果，而不定义达到这个结果的过程是怎样的。与之相对的是 [[concept-imperative|命令式]]。
 

@@ -3,7 +3,7 @@ type: Concept
 tags: OOP
 ---
 
-# Concept: Open-closed Principle
+# Concept: 开闭原则 Open-closed Principle
 
 > 定义接口提供额外一层抽象层，让调用代码和具体接口实现进行松耦合，并且接口通常不允许修改。
 

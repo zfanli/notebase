@@ -3,7 +3,7 @@ type: Concept
 tags: OOP
 ---
 
-# Concept: Dependency Inversion Principle
+# Concept: 依赖反转原则 Dependency Inversion Principle
 
 依赖反转原则，The Dependency Inversion Principle，DIP。传统开发中高级模块直接依赖低级模块会造成紧密耦合，让高级模块难以复用，依赖反转原则旨在模块之间增加一层额外的抽象层，让高级模块和低级模块都依赖着层抽象层定义的接口进行开发，保持相互的封装性，来达到松耦合的目的。依赖反转原则是 [[concept-solid-principles|SOLID 原则]] 中字母 D 指代的原则。
 

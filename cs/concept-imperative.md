@@ -3,7 +3,7 @@ type: Concept
 tags: Concept
 ---
 
-# Concept: Imperative 命令式
+# Concept: 命令式 Imperative
 
 命令式，定义详细到每一个单独步骤，从而达到预期的结果。与之相对的是 [[concept-declarative|声明式]]。
 

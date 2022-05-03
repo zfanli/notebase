@@ -1,5 +1,5 @@
 ---
-type: Source
+type: Indexing
 tags: Frontend MVVM JavaScript
 ---
 

@@ -178,3 +178,19 @@ JSX 表单与 HTML 中对应元素稍有区别。原生元素比如 `<input>`、
 ### Refs
 
 - [Getting Started – React](https://reactjs.org/docs/getting-started.html)
+
+## JSX in Depth
+
+JSX 基本上提供 `React.createElement(component, props, ...children)` 函数的语法糖。下面的 JSX 代码：
+
+```jsx
+<MyButton color="blue" shadowSize={2}>
+  Click Me
+</MyButton>
+```
+
+编译为：
+
+```js
+React.createElement(MyButton, { color: 'blue', shadowSize: 2 }, 'Click Me')
+```

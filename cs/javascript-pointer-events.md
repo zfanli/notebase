@@ -1,6 +1,6 @@
 ---
 type: JavaScript
-tags: JavaScript Frontend
+tags: JavaScript Frontend QoK-B
 ---
 
 # 指针事件 Pointer Events

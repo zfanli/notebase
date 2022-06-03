@@ -1,5 +1,6 @@
 ---
 type: Vue
+tags: Vue JavaScript QoK-B
 ---
 
 # Component: transition

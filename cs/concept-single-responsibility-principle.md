@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: OOP
+tags: OOP QoK-B
 ---
 
 # Concept: 单一职责原则 Single Responsibility Principle

@@ -1,6 +1,6 @@
 ---
 type: JavaScript
-tags: Math
+tags: Math QoK-B
 ---
 
 # Math.atan2()

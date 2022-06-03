@@ -1,6 +1,6 @@
 ---
 type: JavaScript
-tags: JavaScript
+tags: JavaScript QoK-B
 ---
 
 # Ordinary Object 常规对象

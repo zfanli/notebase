@@ -1,6 +1,6 @@
 ---
 type: StateManagement
-tags: StateManagement Vue JavaScript
+tags: StateManagement Vue JavaScript QoK-B
 ---
 
 # Pinia: Store

@@ -1,5 +1,6 @@
 ---
 type: Refactoring
+tags: Dev QoK-B
 ---
 
 # Refactoring: Clean Code

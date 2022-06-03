@@ -1,6 +1,6 @@
 ---
 type: JavaScript
-tags: ES6 JavaScript
+tags: ES6 JavaScript QoK-D
 ---
 
 # Reflect

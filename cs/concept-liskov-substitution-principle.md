@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: OOP
+tags: OOP QoK-B
 ---
 
 # Concept: 里氏替换原则 Liskov Substitution Principle

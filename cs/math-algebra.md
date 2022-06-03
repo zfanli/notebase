@@ -1,6 +1,6 @@
 ---
 type: Math
-tags: Algebra
+tags: Algebra QoK-B
 ---
 
 # Math: Algebra

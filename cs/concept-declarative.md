@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: Concept
+tags: Concept QoK-B
 ---
 
 # Concept: 声明式 Declarative

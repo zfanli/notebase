@@ -1,6 +1,6 @@
 ---
 type: Indexing
-tags: Frontend MVVM JavaScript
+tags: Frontend MVVM JavaScript QoK-B
 ---
 
 # React

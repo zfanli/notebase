@@ -1,6 +1,6 @@
 ---
 type: ArtMovement
-# tags: Art ArtMovement
+tags: Art ArtMovement QoK-B
 created: 2022-01-22
 ---
 
@@ -11,7 +11,7 @@ created: 2022-01-22
 | 国家 | 法国        |
 | 时期 | 19 世纪中叶 |
 
-关键人物有 [[artist-claude-monet|莫奈]]、[[artist-camille-pissarro|毕沙罗]] 等。
+关键人物有 [[artist-Claude-Monet|莫奈]]、[[artist-Camille-Pissarro|毕沙罗]] 等。
 
 印象派因为关键人物莫奈的油画作品《日出·印象》受到一位记者的嘲讽而得名。莫奈在绘制《日出·印象》时，由于需要在光线没有变化前，在短时间内完成这个作品，所以无法描绘的很细致。这一点被当时的学院派艺术家指责为粗糙和过于随意，完全是凭着印象乱画，其他人也附和说其为“印象主义”，印象派这个名称随之而来。在之后的时间中印象派逐渐成为法国艺术的主流。
 

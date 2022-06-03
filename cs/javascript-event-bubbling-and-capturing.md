@@ -1,7 +1,7 @@
 ---
 created: 2022-01-16
 type: JavaScript
-tags: JavaScript
+tags: JavaScript QoK-D
 ---
 
 # 事件冒泡和捕获 Event Bubbling and Capturing

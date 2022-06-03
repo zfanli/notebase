@@ -1,5 +1,6 @@
 ---
 type: WebAssembly
+tags: WebAssembly QoK-B
 ---
 
 # WebAssembly

@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: OOP
+tags: OOP QoK-B
 ---
 
 # Concept: 开闭原则 Open-closed Principle

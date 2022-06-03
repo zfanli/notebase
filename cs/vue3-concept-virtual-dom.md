@@ -1,6 +1,6 @@
 ---
 type: Vue
-tags: Vue JavaScript
+tags: Vue JavaScript QoK-B
 ---
 
 # Concept: Virtual DOM

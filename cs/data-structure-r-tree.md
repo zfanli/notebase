@@ -1,6 +1,6 @@
 ---
 type: DataStructure
-tags: DataStructure Algorithm
+tags: DataStructure Algorithm QoK-D
 created: 2022-02-23
 ---
 

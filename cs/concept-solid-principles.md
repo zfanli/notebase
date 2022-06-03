@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: OOP
+tags: OOP QoK-B
 ---
 
 # Concept: SOLID Principles

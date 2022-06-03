@@ -1,7 +1,7 @@
 ---
 created: 2022-01-16
 type: JavaScript
-tags: JavaScript
+tags: JavaScript QoK-D
 ---
 
 # Document.activeElement

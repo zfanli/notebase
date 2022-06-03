@@ -1,6 +1,6 @@
 ---
 type: Vue
-tags: Vue JavaScript
+tags: Vue JavaScript QoK-D
 created: 2022-02-09
 ---
 

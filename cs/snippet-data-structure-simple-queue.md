@@ -1,6 +1,6 @@
 ---
 type: Snippet
-tags: DataStructure Queue FIFO
+tags: DataStructure Queue FIFO QoK-D
 ---
 
 # Snippet: Simple Queue

@@ -1,5 +1,6 @@
 ---
 type: Vue
+tags: Vue JavaScript QoK-D
 ---
 
 # Renderer: Fast Diff

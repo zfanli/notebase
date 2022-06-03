@@ -1,5 +1,6 @@
 ---
 type: DevOps
+tags: Dev DevOps QoK-B
 ---
 
 # Kubernetes

@@ -1,3 +1,8 @@
+---
+type: Snippet
+tags: JavaScript QoK-D
+---
+
 # 如何在数组中对元素计数?
 
 ## 1. [[javascript-javascript-Array.prototype.filter]]

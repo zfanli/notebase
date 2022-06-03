@@ -1,6 +1,6 @@
 ---
 type: DataStructure
-tags: Queue FIFO
+tags: Queue FIFO QoK-B
 ---
 
 # First-in-first-out

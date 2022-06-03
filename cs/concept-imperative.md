@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: Concept
+tags: Concept QoK-B
 ---
 
 # Concept: 命令式 Imperative

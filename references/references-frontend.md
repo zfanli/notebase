@@ -1,6 +1,6 @@
 ---
 type: References
-tags: Frontend
+tags: Frontend QoK-B
 ---
 
 # References: Frontend

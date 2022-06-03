@@ -1,6 +1,6 @@
 ---
 type: Artist
-# tags: Art Artist
+tags: Art Artist QoK-B
 created: 2022-01-22
 ---
 
@@ -16,4 +16,4 @@ created: 2022-01-22
 | 风格         | [[art-movement-impressionism]]           |
 | 成就         | 印象派大师                               |
 
-与 [[artist-claude-monet|莫奈]] 互为好友。
+与 [[artist-Claude-Monet|莫奈]] 互为好友。

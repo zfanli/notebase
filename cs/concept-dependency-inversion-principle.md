@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: OOP
+tags: OOP QoK-B
 ---
 
 # Concept: 依赖反转原则 Dependency Inversion Principle

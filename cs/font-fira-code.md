@@ -1,5 +1,6 @@
 ---
 type: Font
+tags: Dev QoK-B
 ---
 
 # Font: Fira Code

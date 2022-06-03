@@ -1,6 +1,6 @@
 ---
 type: Concept
-tags: Frontend Architecture
+tags: Frontend Architecture QoK-D
 ---
 
 # Frontend: 架构 Architecture

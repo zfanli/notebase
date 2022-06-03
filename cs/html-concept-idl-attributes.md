@@ -1,6 +1,6 @@
 ---
 type: HTML
-# tags: HTML
+tags: HTML JavaScript QoK-D
 created: 2022-02-02
 ---
 

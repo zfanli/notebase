@@ -1,6 +1,6 @@
 ---
 type: JavaScript
-tags: JavaScript
+tags: JavaScript QoK-B
 ---
 
 # Exotic Object 异质对象

@@ -1,6 +1,6 @@
 ---
 type: Snippet
-tags: JavaScript
+tags: JavaScript QoK-D
 ---
 
 # Snippet: Pinch and Zoom

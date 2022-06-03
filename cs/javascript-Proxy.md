@@ -1,6 +1,6 @@
 ---
 type: JavaScript
-tags: ES6 JavaScript ExoticObject
+tags: ES6 JavaScript ExoticObject QoK-D
 ---
 
 # Proxy

@@ -1,5 +1,6 @@
 ---
 type: Refactor
+tags: Dev QoK-B
 ---
 
 # Refactoring: How to Refactor

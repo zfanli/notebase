@@ -283,7 +283,7 @@ await generateApi({
 ```json
 {
   "scripts": {
-    "generateTypes": "node ./scripts/generate-types"
+    "generate:types": "node ./scripts/generate-types"
   }
 }
 ```
@@ -291,7 +291,7 @@ await generateApi({
 执行：
 
 ```shell
-yarn generateTypes
+yarn generate:types
 ```
 
 ### 命令行用法

@@ -118,7 +118,7 @@ React 严格要求组件不允许修改 props 属性的值。
 
 > 同 Vue 最大的不同在于 props 的访问方式。在 React 中函数式组件接受第一个参数作为 props 对象，取值的时候直接从这个对象获取，在 class 形式组件的写法中 props 被绑定在 `this` 上，我们通过 `this.props.xxx` 的方式来访问属性。在 Vue 中，所有 props 和 data 中的属性都被绑定在 `this` 上。
 >
-> 换句话说，在 React 中我们需要关系这个值来自 props 或者是 state；在 Vue 中则完全不关注值来源自哪里，统一动使用 `this` 获取。
+> 换句话说，在 React 中我们需要关心这个值来自 props 或者是 state；在 Vue 中则完全不关注值来源自哪里，统一使用 `this` 获取。
 
 **组件的 state**
 
